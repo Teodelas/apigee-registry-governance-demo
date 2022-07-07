@@ -39,7 +39,7 @@ steps:
       --api.display_name Petstore --allow_missing
       #Create API Version 
       registry rpc update-api-version --api_version.name \
-      projects/$PROJECT_ID/locations/global/apis/petstore/versions/v3 --api_version.display_name v3 \
+      projects/$PROJECT_ID/locations/global/apis/petstore/versions/v4 --api_version.display_name v4 \
       --allow_missing
       #Create API Version Spec
       registry rpc update-api-spec --api_spec.filename=openapi.yaml \
