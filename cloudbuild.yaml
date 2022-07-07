@@ -81,8 +81,8 @@ steps:
       --api_deployment.name projects/$PROJECT_ID/locations/global/apis/petstore/deployments/mock-service \
       --api_deployment.api_spec_revision projects/$PROJECT_ID/locations/global/apis/petstore/versions/v3/specs/openapi.yaml@$(cat /workspace/revisionId) \
       --api_deployment.display_name "Mock endpoint" \
-      --api_deployment.endpoint_uri "$(cat /workspace/cloudrunendpoint)/projects/$PROJECT_ID/locations/global/apis/petstore/versions/v3/specs/openapi.yaml" \
-      --api_deployment.external_channel_uri "$(cat /workspace/cloudrunendpoint)/projects/$PROJECT_ID/locations/global/apis/petstore/versions/v3/specs/openapi.yaml" \
+      --api_deployment.endpoint_uri "$(cat /workspace/cloudrunendpoint)/projects/$PROJECT_ID/locations/global/apis/petstore/versions/v3/specs/openapi.yaml/pets/1" \
+      --api_deployment.external_channel_uri "$(cat /workspace/cloudrunendpoint)/projects/$PROJECT_ID/locations/global/apis/petstore/versions/v3/specs/openapi.yaml/pets/1" \
       --api_deployment.annotations "apihub-external-channel-name=Mock" \
       --api_deployment.intended_audience "This is a Mock endpoint" \
       --api_deployment.labels "apihub-gateway=apihub-unmanaged" \
