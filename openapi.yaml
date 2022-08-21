@@ -55,10 +55,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     post:
-      description: Creates a new pet in the store. Duplicates are allowed
-      operationId: addPet
+      description: Creates a new employee. Duplicates are allowed
+      operationId: addEmployee
       requestBody:
-        description: Pet to add to the store
+        description: Employee to add
         required: true
         content:
           application/json:
@@ -66,7 +66,7 @@ paths:
               $ref: '#/components/schemas/NewPet'
       responses:
         '200':
-          description: pet response
+          description: Employee response
           content:
             application/json:
               schema:
@@ -80,18 +80,18 @@ paths:
   /employee/{id}:
     get:
       description: Returns a user based on a single ID, if the user does not have access to the pet
-      operationId: find pet by id
+      operationId: find employee by id
       parameters:
         - name: id
           in: path
-          description: ID of pet to fetch
+          description: ID of employee to fetch
           required: true
           schema:
             type: integer
             format: int64
       responses:
         '200':
-          description: pet response
+          description: employee response
           content:
             application/json:
               schema:
@@ -103,19 +103,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     delete:
-      description: deletes a single pet based on the ID supplied
-      operationId: deletePet
+      description: deletes a single employee based on the ID supplied
+      operationId: delete employee
       parameters:
         - name: id
           in: path
-          description: ID of pet to delete
+          description: ID of employee to delete
           required: true
           schema:
             type: integer
             format: int64
       responses:
         '204':
-          description: pet deleted
+          description: employee deleted
         default:
           description: unexpected error
           content:
@@ -156,3 +156,4 @@ components:
           format: int32
         message:
           type: string
+       
